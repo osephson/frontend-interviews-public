@@ -1,1 +1,6 @@
 /* components/ProductFilter.module.css */
+
+.container {
+    display: flex;
+    justify-content: center;
+}
