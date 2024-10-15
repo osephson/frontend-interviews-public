@@ -34,10 +34,7 @@ const filterProducts = (products: IProduct[], filter: string) => {
 export default function Home() {
   const [filter, setFilter] = useState('')
 
-  const products = useMemo(() => {
-    const ps = filterProducts(initProducts, filter)
-    return ps
-  }, [filter])
+  const products = useMemo(() => filterProducts(initProducts, filter), [filter])
 
   const handleFilterChange = (f: string) => {
     setFilter(f)
